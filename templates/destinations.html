@@ -1,0 +1,269 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="page-header bg-light py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <h1 class="fw-bold mb-3">Explore Destinations</h1>
+                <p class="lead">Discover amazing places from around the world, with insider tips and stunning
+                    photography.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Destination Filters -->
+<section class="py-4 border-bottom">
+    <div class="container">
+        <div class="row g-3">
+            <div class="col-md-3">
+                <select class="form-select">
+                    <option selected>All Continents</option>
+                    <option>Asia</option>
+                    <option>Europe</option>
+                    <option>North America</option>
+                    <option>South America</option>
+                    <option>Africa</option>
+                    <option>Australia</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <select class="form-select">
+                    <option selected>All Categories</option>
+                    <option>Beach</option>
+                    <option>Mountain</option>
+                    <option>City</option>
+                    <option>Cultural</option>
+                    <option>Island</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <select class="form-select">
+                    <option selected>Sort By</option>
+                    <option>Most Popular</option>
+                    <option>Highest Rated</option>
+                    <option>Name A-Z</option>
+                    <option>Name Z-A</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search destinations...">
+                    <button class="btn btn-primary"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Destinations Grid -->
+<section class="py-5">
+    <div class="container">
+        <div class="row g-4">
+            <!-- Destination Card 1 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card destination-card h-100 border-0 shadow-sm">
+                    <div class="ratio ratio-16x9 card-img-top overflow-hidden">
+                        <img src="{{ url_for('static', filename='images/destination-1.jpg') }}" alt="Bali, Indonesia"
+                            class="object-fit-cover">
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge bg-primary">Beach</span>
+                            <small class="text-muted"><i class="fas fa-map-marker-alt me-1"></i>Indonesia</small>
+                        </div>
+                        <h5 class="card-title fw-bold">Bali: Island of the Gods</h5>
+                        <p class="card-text text-muted">Discover tropical paradise with beautiful beaches, lush rice
+                            terraces, and spiritual temples.</p>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div>
+                                <span class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </span>
+                                <small class="ms-1">4.5 (120)</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Destination Card 2 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card destination-card h-100 border-0 shadow-sm">
+                    <div class="ratio ratio-16x9 card-img-top overflow-hidden">
+                        <img src="{{ url_for('static', filename='images/destination-2.jpg') }}" alt="Tokyo, Japan"
+                            class="object-fit-cover">
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge bg-danger">City</span>
+                            <small class="text-muted"><i class="fas fa-map-marker-alt me-1"></i>Japan</small>
+                        </div>
+                        <h5 class="card-title fw-bold">Tokyo: Modern Metropolis</h5>
+                        <p class="card-text text-muted">Experience the perfect blend of traditional culture and
+                            futuristic technology in Japan's capital.</p>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div>
+                                <span class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </span>
+                                <small class="ms-1">4.9 (210)</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Destination Card 3 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card destination-card h-100 border-0 shadow-sm">
+                    <div class="ratio ratio-16x9 card-img-top overflow-hidden">
+                        <img src="{{ url_for('static', filename='images/destination-3.jpg') }}" alt="Santorini, Greece"
+                            class="object-fit-cover">
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge bg-success">Island</span>
+                            <small class="text-muted"><i class="fas fa-map-marker-alt me-1"></i>Greece</small>
+                        </div>
+                        <h5 class="card-title fw-bold">Santorini: White Paradise</h5>
+                        <p class="card-text text-muted">Fall in love with the iconic white buildings, blue domes, and
+                            breathtaking Aegean views.</p>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div>
+                                <span class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </span>
+                                <small class="ms-1">4.0 (95)</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Destination Card 4 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card destination-card h-100 border-0 shadow-sm">
+                    <div class="ratio ratio-16x9 card-img-top overflow-hidden">
+                        <img src="{{ url_for('static', filename='images/destination-4.jpg') }}" alt="Paris, France"
+                            class="object-fit-cover">
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge bg-danger">City</span>
+                            <small class="text-muted"><i class="fas fa-map-marker-alt me-1"></i>France</small>
+                        </div>
+                        <h5 class="card-title fw-bold">Paris: City of Love</h5>
+                        <p class="card-text text-muted">Explore romantic streets, iconic landmarks, and world-class
+                            museums in the French capital.</p>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div>
+                                <span class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </span>
+                                <small class="ms-1">4.2 (185)</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Destination Card 5 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card destination-card h-100 border-0 shadow-sm">
+                    <div class="ratio ratio-16x9 card-img-top overflow-hidden">
+                        <img src="{{ url_for('static', filename='images/destination-5.jpg') }}" alt="Machu Picchu, Peru"
+                            class="object-fit-cover">
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge bg-warning text-dark">Historical</span>
+                            <small class="text-muted"><i class="fas fa-map-marker-alt me-1"></i>Peru</small>
+                        </div>
+                        <h5 class="card-title fw-bold">Machu Picchu: Lost City</h5>
+                        <p class="card-text text-muted">Discover the ancient Incan citadel nestled high in the Andes
+                            mountains with spectacular views.</p>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div>
+                                <span class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </span>
+                                <small class="ms-1">4.7 (142)</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Destination Card 6 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card destination-card h-100 border-0 shadow-sm">
+                    <div class="ratio ratio-16x9 card-img-top overflow-hidden">
+                        <img src="{{ url_for('static', filename='images/destination-6.jpg') }}" alt="Kyoto, Japan"
+                            class="object-fit-cover">
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge bg-info">Cultural</span>
+                            <small class="text-muted"><i class="fas fa-map-marker-alt me-1"></i>Japan</small>
+                        </div>
+                        <h5 class="card-title fw-bold">Kyoto: Cultural Heart</h5>
+                        <p class="card-text text-muted">Step back in time with ancient temples, traditional gardens, and
+                            authentic cultural experiences.</p>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div>
+                                <span class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </span>
+                                <small class="ms-1">4.8 (198)</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <nav aria-label="Destinations pagination" class="mt-5">
+            <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true"><i
+                            class="fas fa-chevron-left"></i></a>
+                </li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#"><i class="fas fa-chevron-right"></i></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,233 @@
+/* 
+* Wanderlust - Travel Blog Website
+* Custom CSS Styles
+*/
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    transition: all 0.3s ease;
+}
+
+.btn {
+    padding: 0.6rem 1.5rem;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #3f80ea;
+    border-color: #3f80ea;
+}
+
+.btn-primary:hover {
+    background-color: #2c6dd5;
+    border-color: #2c6dd5;
+}
+
+.btn-outline-primary {
+    color: #3f80ea;
+    border-color: #3f80ea;
+}
+
+.btn-outline-primary:hover {
+    background-color: #3f80ea;
+    border-color: #3f80ea;
+}
+
+/* Navigation */
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+.navbar .nav-link {
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    color: #555;
+}
+
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+    color: #3f80ea;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 85vh;
+    min-height: 500px;
+    max-height: 800px;
+}
+
+.hero-img-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-content {
+    z-index: 1;
+    padding: 6rem 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.1) 100%);
+}
+
+/* Destination Cards */
+.destination-card {
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.destination-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.destination-card img {
+    transition: all 0.5s ease;
+}
+
+.destination-card:hover img {
+    transform: scale(1.05);
+}
+
+.card-img-top {
+    border-radius: 10px 10px 0 0;
+}
+
+.badge {
+    padding: 0.5em 1em;
+    font-weight: 500;
+}
+
+/* Team Cards */
+.team-card {
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: #3f80ea;
+    color: white !important;
+}
+
+/* Page Header */
+.page-header {
+    padding: 5rem 0;
+}
+
+/* Values Section */
+.icon-box {
+    width: 80px;
+    height: 80px;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.card:hover .icon-box {
+    transform: scale(1.1);
+}
+
+/* Contact Info */
+.contact-info {
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.contact-info:hover {
+    transform: translateY(-5px);
+}
+
+/* Footer */
+footer {
+    position: relative;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../images/footer-bg.jpg') center/cover no-repeat;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+/* Media Queries */
+@media (max-width: 767.98px) {
+    .hero-section {
+        height: 70vh;
+    }
+
+    .overlay {
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 70%, rgba(0, 0, 0, 0.1) 100%);
+    }
+
+    .hero-content {
+        text-align: center;
+        padding: 3rem 0;
+    }
+
+    .page-header {
+        padding: 3rem 0;
+        text-align: center;
+    }
+}
